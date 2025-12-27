@@ -1,1 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Search</title>
 
+    <style>
+        body {
+            background-color:#1f2125;
+            margin: 0;
+            height: 100vh;
+        }
+
+        form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .tbox {
+            background: url(search-icon.png) no-repeat left;
+            background-size: 25px;
+            background-position-x: 2%;
+            background-color: #4e5257;
+            width: 600px;
+            height: 50px;
+            padding-left: 44px;
+            font-size: 16px;
+            color: white;
+            border: 1px solid #4e5257;
+            border-radius: 50px;
+            outline: none;
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+        
+        }
+
+        .tbox:hover {
+            box-shadow: 0 1px 6px 2px rgba(31, 33, 36, 0.28);
+            background-color: #5f6368
+        }
+
+        .bbox {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px 10px;
+            padding: 10px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            border: 1px solid #303134;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #303134;
+            border-radius: 10px;
+        }
+
+        .bbox:hover {
+            border: 1px solid #dadce0;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+        }
+
+        #sbox {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px 10px;
+            padding: 10px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            border: 1px solid #303134;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #3a6cbd;
+            border-radius: 10px;
+        }
+
+        .links {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        .links button {
+            margin-left: 10px;
+        }
+
+        #logo{
+            width:35%
+        }
+
+        #txt{
+            color: #aa4f49;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="links">
+        <button onclick="location='Google-search.html'" class="bbox">Google search</button>
+    </div>
+
+    <form action="https://www.google.com/search" method="get">
+
+        <img src="Google-logo.png" alt="google logo" id="logo">
+        <h1 id="txt">Advanded sreach</h1>
+        <br>
+        <input type="text" name="as_q" placeholder="All these words" class="tbox">
+        <br>
+        <br>
+        <input type="text" name="as_epq" placeholder="Exact phrase" class="tbox">
+        <br>
+        <br>
+        <input type="text" name="as_oq" placeholder="Any of these words" class="tbox">
+        <br>
+        <br>
+        <input type="text" name="as_eq" placeholder="None of these words" class="tbox">
+        <br>
+        <br>
+
+        <select name="lr" class="bbox">
+            <option value="">Any language</option>
+            <option value="lang_en">English</option>
+            <option value="lang_fa">Persian</option>
+        </select>
+    
+        <select name="cr" class="bbox">
+            <option value="">Any region</option>
+            <option value="countryUS">United States</option>
+            <option value="countryIR">Iran</option>
+        </select>
+        <br>
+        <br>
+        <input type="text" name="as_sitesearch" placeholder="Site or domain" class="tbox">
+    
+        <input type="hidden" name="tbm" value="">
+        <br>
+        <input type="submit" value="Advanced Search" id="sbox">
+    </form>
+
+</body>
+</html>
