@@ -19,11 +19,16 @@
         }
 
         #tbox {
+            background: url(search-icon.png) no-repeat left;
+            background-size: 25px;
+            background-position-x: 2%;
             background-color: #4e5257;
-            width: 700px;
-            height: 70px;
-            padding: 0 16px;
+            background-position: 14px center;
+            padding-left: 44px;
+            width: 600px;
+            height: 50px;
             font-size: 16px;
+            color: white;
             border: 1px solid #4e5257;
             border-radius: 50px;
             outline: none;
@@ -41,6 +46,7 @@
             margin: 20px 10px;
             padding: 10px 30px;
             font-size: 16px;
+            font-weight: bold;
             color: #ffffff;
             border: 1px solid #303134;
             border-radius: 4px;
@@ -65,7 +71,7 @@
         }
 
         #logo{
-            width:80%
+            width:50%
         }
     </style>
 </head>
@@ -74,8 +80,8 @@
 
 
     <div class="links">
-        <button onclick="location='https://images.google.com/'" class="bbox">Google image search</button>
-        <button onclick="location='https://www.google.com/advanced_search'" class="bbox">Google advanced search</button>
+        <button onclick="location='Google-image-search.html'" class="bbox">Google image search</button>
+        <button onclick="location='Google-advdnced-search.html'" class="bbox">Google advanced search</button>
     </div>
 
     <form action="https://www.google.com/search">
@@ -84,7 +90,7 @@
         <input type="text" name="q" id="tbox">
         <br>
         <input type="submit" value="Google Search" class="bbox">
-        <input type="submit" value="I'm Feeling Lucky" class="bbox">
+        <input type="submit" name="btnI" value="I'm Feeling Lucky" class="bbox">
     </form>
 
 </body>
